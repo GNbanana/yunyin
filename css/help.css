@@ -1,0 +1,45 @@
+.fw_box { background: #fff url(../images/fw/bj_25.jpg) left repeat-y; margin-top: 30px; margin-bottom: 60px; overflow: hidden; }
+.left_nav { float: left; width: 215px; background: #2b2b2b; padding: 28px 0; }
+.bzzx_nav_list { margin-left: 27px; }
+.bzzx_nav_list li a { display: block; line-height: 54px; color: #f5f5f5; font-size: 16px; height: 54px; padding-left: 50px; }
+.bzzx_nav_list li a.icon_1 { background: url(../images/fw/fw_icon_10.png) 20px center no-repeat; }
+.bzzx_nav_list li a.icon_2 { background: url(../images/fw/fw_icon_13.png) 20px center no-repeat; }
+.bzzx_nav_list li a.icon_3 { background: url(../images/fw/fw_icon_15.png) 20px center no-repeat; }
+.bzzx_nav_list li a.icon_4 { background: url(../images/fw/fw_icon_17.png) 20px center no-repeat; }
+.bzzx_nav_list li a.icon_5 { background: url(../images/fw/fw_icon_19.png) 20px center no-repeat; }
+.bzzx_nav_list li a.icon_6 { background: url(../images/fw/fw_icon_21.png) 20px center no-repeat; }
+.bzzx_nav_list li a.icon_7 { background: url(../images/fw/fw_icon_23.png) 20px center no-repeat; }
+.bzzx_nav_list li.on a.icon_1, .bzzx_nav_list li a:hover.icon_1 { background: #fff url(../images/fw/fw_icon_on_10.png) 20px center no-repeat; color: #2b2b2b; }
+.bzzx_nav_list li.on a.icon_2, .bzzx_nav_list li a:hover.icon_2 { background: #fff url(../images/fw/fw_icon_on_13.png) 20px center no-repeat; color: #2b2b2b; }
+.bzzx_nav_list li.on a.icon_3, .bzzx_nav_list li a:hover.icon_3 { background: #fff url(../images/fw/fw_icon_on_15.png) 20px center no-repeat; color: #2b2b2b; }
+.bzzx_nav_list li.on a.icon_4, .bzzx_nav_list li a:hover.icon_4 { background: #fff url(../images/fw/fw_icon_on_17.png) 20px center no-repeat; color: #2b2b2b; }
+.bzzx_nav_list li.on a.icon_5, .bzzx_nav_list li a:hover.icon_5 { background: #fff url(../images/fw/fw_icon_on_19.png) 20px center no-repeat; color: #2b2b2b; }
+.bzzx_nav_list li.on a.icon_6, .bzzx_nav_list li a:hover.icon_6 { background: #fff url(../images/fw/fw_icon_on_21.png) 20px center no-repeat; color: #2b2b2b; }
+.bzzx_nav_list li.on a.icon_7, .bzzx_nav_list li a:hover.icon_7 { background: #fff url(../images/fw/fw_icon_on_23.png) 20px center no-repeat; color: #2b2b2b; }
+/****************************************/ 
+ 
+
+
+/*右边*/
+.fw_conent { float: right; padding: 30px 35px; width: 915px; line-height: 28px; font-size: 14px; color: #666; background: #FFF; min-height: 600px; }
+.fw_conent .c999 { color: #999; }
+.bzzx_bt { font-size: 12px; color: #999; background: url(../images/line_13.jpg) bottom repeat-x; margin-bottom: 20px; }
+.bzzx_bt strong { color: #333; font-size: 20px; font-weight: 400; border-bottom: 2px solid #169ed8; padding-bottom: 15px; display: inline-block; margin-right: 20px; }
+.bzzx_bt span { color: #169ed8; }
+.zwfb_shop_table { margin-left: 100px; margin-top: 50px; }
+.fwmc_xxk { overflow: hidden; width: 650px; margin-left: 20px; }
+.fwmc_xxk li { float: left; width: 150px; height: 52px; border: 1px solid #ddd; font-size: 18px; color: #666; margin-right: 30px; text-align: center; margin-bottom: 25px; overflow: hidden; cursor: pointer; }
+.fwmc_xxk li p { line-height: 18px; font-size: 12px; color: #999; margin-top: 5px; }
+.fwmc_xxk li.on { background: url(../images/fw/fwkk.jpg) no-repeat center; color: #169ed8; border: 1px solid #169ed8; }
+.fwmc_xxk li.on p { color: #169ed8; }
+.nmb_jj { overflow: hidden; margin-left: 20px; }
+.nmb_jj li { float: left; text-align: center; line-height: 30px; border: 1px solid #ddd; font-size: 20px; padding: 0 8px; }
+.nmb_jj li.jia { border-left: none; cursor: pointer; color: #999; width:30px; padding:0;  }
+.nmb_jj li.jian { border-right: none; cursor: pointer; color: #999;width:30px; padding:0; }
+.nmb_jj li .srkk { width: 30px; font-size: 16px; border: none; line-height: 24px; text-align: center; }
+.zwfb_zje { margin-left: 20px; font-size: 20px; color: #169ed8; }
+.zwfb_zje i { font-size: 14px; padding-left: 5px; font-style: normal; }
+.gmxz_tip { margin-top: 80px; margin-left: 100px; font-size: 14px; color: #333; }
+.gmxz_tip p { font-size: 12px; color: #999; line-height: 24px; }
+.zwsl_num{ margin-left:20px; font-size:16px; color:#333;}
+.zwsl_num span{ color:#999; font-size:12px; padding-left:10px;}

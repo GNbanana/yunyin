@@ -1,0 +1,184 @@
+.menu-collapser {
+    position: relative;
+    width: 100%;
+    clear: both;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.collapse-button {
+    position: relative;
+    margin: -12px 0 20px 0;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.collapse-button .icon-bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 4.5px 0 0 0;
+    background: #f8c218;
+    border-radius: 1px;
+}
+#mega-menu-holder {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#mega-menu-holder:before, #mega-menu-holder:after {
+    content: '';
+    display: table;
+}
+#mega-menu-holder:after {
+    clear: both;
+}
+#mega-menu-holder.collapsed li {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+#mega-menu-holder.collapsed li>ul {
+    position: static;
+    display: none;
+}
+#mega-menu-holder.collapsed li a {
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+#mega-menu-holder li .sub-toggle {
+    font-family: 'font-awesome';
+    display:block;
+    position: absolute;
+    right: 5px;
+    top: 11px;
+    color: #323131;
+    font-size: 17px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+#mega-menu-holder li {
+    position: relative;
+    float: left;
+    display: inline-block;
+}
+#mega-menu-holder>ul> li> a {
+    font-size: 17px;
+    font-weight: 500;
+    color: #323131;
+    text-decoration: none;
+    padding: 9px 20px 50px 20px;
+    text-transform: capitalize;
+    position: relative;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+#mega-menu-holder li ul {
+    margin: 0;
+    list-style-type: none;
+}
+#mega-menu-holder li>ul.dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 999;
+    min-width: 200px;
+    white-space: nowrap;
+    -webkit-box-shadow: 0px 13px 25px -12px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 13px 25px -12px rgba(0,0,0,0.25);
+    box-shadow: 0px 13px 25px -12px rgba(0,0,0,0.25);
+}
+#mega-menu-holder li>ul.dropdown li {
+    background: #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    width: 100%;
+}
+#mega-menu-holder li>ul.dropdown li:last-child {border:none;}
+#mega-menu-holder li>ul>li ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    z-index: 999;
+    display: none;
+    width: 100%
+}
+#mega-menu-holder ul.dropdown li a {
+    width: 100%;
+    background: none;
+    padding: 0 0 0 20px;
+    line-height: 44px;
+    font-size: 16px;
+    color: rgba(18,18,18,0.7);
+    text-transform: capitalize;
+    text-decoration: none;
+    display: inline-block;
+    clear: both;
+    position: relative;
+    outline: 0;
+    -o-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
+#mega-menu-holder ul.dropdown li a:hover {padding-left: 30px; color:#fff;}
+
+#mega-menu-holder>li {
+    border-left: 1px solid #999;
+}
+#mega-menu-holder>li:first-child, #mega-menu-holder>li.has-submenu+li {
+    border-left: 0;
+}
+@media (max-width: 991px) {
+  #mega-menu-holder {
+        background: #000;
+        max-height: 400px;
+        overflow-y:auto;
+    }
+    #mega-menu-holder li {float: none;}
+
+    #mega-menu-holder li:hover {
+        background: #333;
+    }
+
+  #mega-menu-holder>ul> li> a {
+        color: #fff;
+        width: 100%;
+        padding: 0 15px;
+        display: block;
+        border-bottom: solid 1px #f0f0f0;
+        margin: 0;
+        line-height: 45px;
+        font-size: 15px;
+    }
+    #mega-menu-holder>ul> li:last-child> a {border: none;}
+    #mega-menu-holder>ul> li:first-child> a {border-top: 1px solid #f0f0f0;}
+    #mega-menu-holder li .sub-toggle,
+    .business-header .theme-main-menu.fixed #mega-menu-holder li .sub-toggle {
+        color: #fff;
+        border-left: solid 1px #f0f0f0;
+        width: 60px;
+        line-height: 46px;
+        right: 0;
+        top:0;
+    }
+    #mega-menu-holder li>ul.dropdown {
+        border: none !important;
+        position: static;
+        width: 100%;
+    }
+}
+/*(max-width: 991px)*/

@@ -1,0 +1,759 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- For IE -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- For Resposive Device -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>开始打印</title>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+        <link rel="stylesheet" href="css/jquery-labelauty.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+
+        <!--消息提示插件-->
+		<link href="css/notyf.min.css" rel="stylesheet">
+        <link href="vendor/bootstrap/bootstrap.css" type="text/css" rel="stylesheet" />
+        <link href="css/webuploader.css" type="text/css" rel="stylesheet" />
+
+	    <link rel="stylesheet" type="text/css" href="css/basictable.css" />
+
+
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="js/webuploader.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script type="text/javascript" src="vendor/bootstrap/bootstrap.min.js"></script>
+
+
+        <!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="vendor/html5shiv.js"></script>
+			<script src="vendor/respond.js"></script>
+		<![endif]-->
+
+<style>
+body {
+	background: url("images/home/bg.jpg") repeat;
+}
+</style>
+
+
+</head>
+
+<body class="seo-theme">
+	<div class="main-page-wrapper">
+
+		<!-- ===================================================
+				Loading Transition
+			==================================================== -->
+		<div id="loader-wrapper">
+			<div id="loader"></div>
+		</div>
+
+
+		<!-- 
+			=============================================
+				Theme Header
+			============================================== 
+			-->
+		<header class="seo-header">
+
+			<!-- ============================ Theme Menu ========================= -->
+			<div class="theme-main-menu">
+				<div class="container">
+					<div class="main-container clearfix">
+						<div class="logo float-left">
+							<a href="index.html"><img src="images/logo/logo4.png"
+								alt="Logo"></a>
+						</div>
+
+
+						<!-- ============== Menu Warpper ================ -->
+						<div class="menu-wrapper float-right">
+							<nav id="mega-menu-holder" class="clearfix">
+								<ul class="clearfix">
+									<li><a href="index.html">首页</a></li>
+									<li><a href="print.html">开始打印</a></li>
+									<li><a href="data.html">资料库</a></li>
+									<li><a href="about-us.html">关于我们</a></li>
+								</ul>
+							</nav>
+							<!-- /#mega-menu-holder -->
+						</div>
+						<!-- /.menu-wrapper -->
+					</div>
+					<!-- /.main-container -->
+				</div>
+				<!-- /.container -->
+			</div>
+			<!-- /.theme-main-menu -->
+		</header>
+
+		<!-- 
+			=============================================
+				Theme Inner Banner
+			============================================== 
+			-->
+		<div class="theme-inner-banner">
+			<div class="opacity">
+				<div class="container">
+					<h2 class="float-left print-banner-title">开始打印</h2>
+					<ul class="float-right">
+						<li><a href="index.html" class="tran3s">首页</a></li>
+						<li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+						<li>开始打印</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /.opacity -->
+		</div>
+		<!-- /.theme-inner-banner -->
+
+
+
+		<!-- 
+			=============================================
+                print process
+			============================================== 
+			-->
+		<div class="print-process">
+
+			<!--nav-->
+			<div class="lift-nav">
+				<ul class="lift">
+					<li>选择店铺</li>
+					<li>选择文件</li>
+					<li>配送方式</li>
+					<li>支付</li>
+
+				</ul>
+			</div>
+
+			<!--content-->
+			<div class="lift-target">
+
+				<div class="t1 process-content">
+					<h4>
+						选择店铺 <span>● shop</span>
+					</h4>
+
+					<ul class="choose-shop">
+						<li><input type="checkbox" name="radio" data-labelauty="江安" checked></li>
+						<li><input type="checkbox" name="radio" disabled data-labelauty="望江"></li>
+						<li><input type="checkbox" name="radio" disabled data-labelauty="华西"></li>
+					</ul>
+
+				</div>
+
+				<div class="t2 process-content">
+					<h4>
+						选择文件 <span>● file</span>
+					</h4>
+					<div class="container" style="margin-top: 50px">
+
+						<div id="uploader" class="container">
+
+							<div class="btns container">
+								<div id="picker" class="webuploader-container"
+									style="float: left; margin-right: 10px">
+									<div>
+										选择文件 <input type="file" name="file"
+											class="webuploader-element-invisible" multiple="multiple">
+									</div>
+								</div>
+
+								<div id="UploadBtn" class="webuploader-pick" style="float: left">开始上传</div>
+							</div>
+							<div class="container">
+								<div id="fileList" class="uploader-list"></div>
+								<!--存放文件的容器-->
+							</div>
+						</div>
+					</div>
+
+					<div class="print_price instruction-button"><i class="fa fa-bell"></i>打印价格</div>
+
+				</div>
+
+				<div class="t3 process-content">
+					<h4>
+						配送方式 <span>● distribution</span>
+					</h4>
+
+					<ul class="choose-distribution">
+						<li class="distribution1"><input type="radio" name="radio" data-labelauty="自提" checked></li>
+						<li class="distribution2"><input type="radio" name="radio" data-labelauty="配送"></li>
+					</ul>
+
+				<ul class="person-message">
+							<li class="phone_li"><input class="message phone" id="phone-check" type="text" placeholder="手机号"></li>
+							<li class='address_li'><input class='message address' id="address-check" type='text' placeholder='配送地址'></li>
+						</ul>
+
+				</div>
+
+				<div class="t4 process-content">
+					<h4>
+						支付 <span>● pay</span>
+					</h4>
+
+					<div class="total-cost">
+						<span class="totalPrice">0.00</span>
+						
+						<button class="pay-button" type="submit" onclick="pay()">确认支付</button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+		<!-- 
+			=============================================
+				Footer
+			============================================== 
+			-->
+		<footer class="default-footer seo-footer">
+			<div class="container">
+				<div class="top-footer row">
+					<div class="col-md-6 col-sm-5 footer-logo">
+						<a href="index.html"><img src="images/logo/logo3.png"
+							alt="Logo"></a>
+						<p>云印起源于四川大学江安校区，致力于高校打印行业，通过汇总打印资源，在线下单，预约取货，从而节省大量时间，为同学老师们提供最便捷的打印服务。</p>
+					</div>
+					<!-- /.footer-logo -->
+
+
+					<div class="col-md-6 col-sm-4 footer-latest-news">
+						<h6>公司发展</h6>
+						<div class="single-news">
+							<h5>
+								<a href="#" class="tran3s">优印堂入驻云印...</a>
+							</h5>
+							<span>13 Feb, 2017 / Business</span>
+						</div>
+						<!-- /.single-news -->
+						<div class="single-news">
+							<h5>
+								<a href="#" class="tran3s">i创源入驻云印...</a>
+							</h5>
+							<span>13 Jun, 2017 / Business</span>
+						</div>
+						<!-- /.single-news -->
+					</div>
+					<!-- /.footer-latest-news -->
+
+				</div>
+				<!-- /.top-footer -->
+			</div>
+			<!-- /.container -->
+
+			<div class="bottom-footer">
+				<div class="container">
+					<div class="wrapper clearfix">
+						<p class="float-left">Copyright &copy; 2017.优印堂 All rights
+							reserved.</p>
+					</div>
+					<!-- /.wrapper -->
+				</div>
+				<!-- /.container -->
+			</div>
+			<!-- /.bottom-footer -->
+		</footer>
+
+
+
+		<!-- Scroll Top Button -->
+		<button class="scroll-top tran3s hvr-shutter-out-horizontal">
+			<i class="fa fa-angle-up" aria-hidden="true"></i>
+		</button>
+
+		<div class="print-price-popover instruction-popover">
+			<div class="print-price-poptit instruction-poptit">
+				<a href="javascript:;" title="关闭" class="close">×</a>
+				<h6>打印价格及说明</h6>
+			</div>
+			<div class="print-price-popbod instruction-popbod dform">
+				<h5>打印价格</h5>
+				<table id="price-table">
+					<thead>
+					<tr>
+						<th>单面黑白</th>
+						<th>双面黑白</th>
+						<th>单面彩印</th>
+						<th>双面彩印</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>0.2</td>
+						<td>0.3</td>
+						<td>1</td>
+						<td>2</td>
+					</tr>
+					</tbody>
+				</table>
+				<p><i class="fa fa-exclamation"></i>现只支持A4纸张</p>
+				<h5>多合一说明</h5>
+				<table id="allinone-table">
+					<thead>
+					<tr>
+						<th>一合一</th>
+						<th>二合一</th>
+						<th>四合一</th>
+						<th>六合一</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>每张纸打印一张幻灯片</td>
+						<td>每张纸打印两张幻灯片</td>
+						<td>每张纸打印四张幻灯片</td>
+						<td>每张纸打印六张幻灯片</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="instruction-popover-mask"></div>
+
+
+	</div>
+	<!-- /.main-page-wrapper -->
+
+		<!-- Js File_________________________________ -->
+
+		<!-- j Query -->
+		<script type="text/javascript" src="vendor/jquery.2.2.3.min.js"></script>
+
+
+		<!-- Vendor js _________ -->
+		<!-- fancy box -->
+		<script type="text/javascript"
+			src="vendor/fancy-box/jquery.fancybox.pack.js"></script>
+		<!-- menu  -->
+		<script type="text/javascript"
+			src="vendor/menu/src/js/jquery.slimmenu.js"></script>
+		<script type="text/javascript" src="vendor/jquery.easing.1.3.js"></script>
+
+		<!-- WOW js -->
+		<script type="text/javascript" src="vendor/WOW-master/dist/wow.min.js"></script>
+		<!-- owl.carousel -->
+		<script type="text/javascript"
+			src="vendor/owl-carousel/owl.carousel.min.js"></script>
+		<!-- js count to -->
+		<script type="text/javascript" src="vendor/jquery.appear.js"></script>
+		<script type="text/javascript" src="vendor/jquery.countTo.js"></script>
+
+       <script type="text/javascript" src="js/notyf.min.js"></script>
+		<!-- Theme js -->
+		<script type="text/javascript" src="js/theme.js"></script>
+
+
+
+
+	<!--<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>-->
+
+	<script src="js/LiftEffect.js"></script>
+
+	<script src="js/jquery-labelauty.js"></script>
+
+
+	<script type="text/javascript" src="js/jquery.basictable.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#price-table').basictable();
+			$('#allinone-table').basictable();
+
+		});
+
+
+		$(function() {
+			$('.choose-shop li input').labelauty();
+		});
+
+		$(function() {
+			$('.choose-distribution li input').labelauty();
+		});
+
+		$(function() {
+			LiftEffect({
+				"control1" : ".lift-nav", //侧栏电梯的容器
+				"control2" : ".lift", //需要遍历的电梯的父元素
+				"target" : [ ".t1", ".t2", ".t3", ".t4" ], //监听的内容，注意一定要从小到大输入
+				"current" : "current" //选中的样式
+			});
+		});
+
+		
+	</script>
+
+	<script type="text/javascript">
+		$(function() {
+			$list = $('#fileList');
+			//WebUploader实例
+			var uploader = WebUploader.create({
+
+				//设置选完文件后是否自动上传
+				auto : false,
+
+				//swf文件路径
+				//swf: BASE_URL + '~/FileUpload/Uploader.swf',
+				swf : '../printerWeb/Uploader.swf',
+
+				// 文件接收服务端。
+				server : '../printerWeb/FileUp.action',
+
+				// 选择文件的按钮。可选。
+				// 内部根据当前运行是创建，可能是input元素，也可能是flash.
+				pick : '#picker',
+
+				// 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
+				resize : false,
+
+				
+				
+				
+			//选择图片文件
+			accept : {
+			    title: 'file',
+			    extensions: 'pdf,doc,docx,ppt,pptx',
+			    mimeTypes: 'application/pdf,application/vnd.openxmlformats-officedocument.presentationml.template,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/msword,application/vnd.ms-powerpoint'
+			}
+			});
+
+			// 当有文件被添加进队列的时候
+			uploader
+					.on(
+							'fileQueued',
+							function(file) {
+
+
+                                var imgName;
+								var fileFormat =file.name.substr(file.name.indexOf("."));
+								if( (fileFormat==".docx") || (fileFormat==".doc")){
+									imgName = "word";
+								}else if( (fileFormat==".ppt") || (fileFormat==".pptx")){
+									imgName = "ppt";
+								}else if( (fileFormat==".pdf")){
+									imgName = "pdf";
+								}
+
+							
+								$list
+										.append('<div id="' + file.id + '" class="upload-file"><div class="file-icon upload-content"><div class="text-icon"><img class="file_img" src="images/data/'+imgName+'.png"></div><div class="file-title"><p id="' + file.id + '" class="filename">'+file.name
+												+'</p><span class="state">等待上传</span></div></div><div class="choose-spec upload-content"></div></div>');
+								
+								$(".btn-show").click(function(){
+									
+									window.open("https://owa-box.vips100.com/op/view.aspx?src=http://www.ndrc.gov.cn/gzdt/201405/W020140516349081423388.doc");  
+									
+									
+									
+									
+									
+									
+								});
+								//删除要上传的文件
+								//每次添加文件都给btn-delete绑定删除方法
+								$(".btn-delete")
+										.click(
+												function() {
+													//console.log($(this).attr("fileId"));//拿到文件id
+													uploader
+															.removeFile(uploader
+																	.getFile(
+																			$(
+																					this)
+																					.attr(
+																							"fileId"),
+																			true));
+													$(this).parent().parent().parent().parent().parent()
+															.fadeOut();//视觉上消失了
+													$(this).parent().parent().parent().parent().parent()
+															.remove();//DOM上删除了
+												});
+							});
+
+			// 文件上传过程中创建进度条实时显示。
+			uploader
+					.on(
+							'uploadProgress',
+							function(file, percentage) {
+								var $li = $('#' + file.id), $percent = $li
+										.find('.progress .progress-bar');
+
+								// 避免重复创建
+								if (!$percent.length) {
+									$percent = $(
+											'<div class="progress progress-striped active">'
+													+ '<div class="progress-bar" role="progressbar" style="width: 0%">'
+													+ '</div>' + '</div>')
+											.appendTo($li)
+											.find('.progress-bar');
+								}
+
+								$li.find('span.state').text('上传中');
+
+								$percent.css('width', percentage * 100 + '%');
+							});
+
+			uploader.on('uploadSuccess', function(file) {
+
+				$('#' + file.id).find('span.state').text('已上传,正在计算页数');
+				$('#' + file.id).find(".progress").find(".progress-bar").attr(
+						"class", "progress-bar progress-bar-success");
+				$.ajax({
+					url : "../printerWeb/getFilePage.action",
+					type : "GET",
+					timeout :500*1000,
+					data : "string=" + file.name + file.size,
+					dataType : "json",
+					success : function(data) {
+
+						$('#' + file.id).find('span.state').text(
+								data.page);
+					}
+
+				});
+			});
+
+			uploader
+					.on(
+							'uploadError',
+							function(file) {
+								$('#' + file.id).find('p.state').text('上传出错');
+								//上传出错后进度条爆红
+								$('#' + file.id).find(".progress").find(
+										".progress-bar").attr("class",
+										"progress-bar progress-bar-danger");
+								//添加重试按钮
+								//为了防止重复添加重试按钮，做一个判断
+								//var retrybutton = $('#' + file.id).find(".btn-retry");
+								//$('#' + file.id)
+								if ($('#' + file.id).find(".btn-retry").length < 1) {
+									var btn = $('<button type="button" fileid="' + file.id + '" class="btn btn-success btn-retry"><span class="glyphicon glyphicon-refresh"></span></button>');
+									$('#' + file.id).find(".info").append(btn);//.find(".btn-danger")
+								}
+
+								$(".btn-retry").click(
+										function() {
+											//console.log($(this).attr("fileId"));//拿到文件id
+											uploader.retry(uploader.getFile($(
+													this).attr("fileId")));
+
+										});
+							});
+
+			uploader.on('uploadComplete', function(file) {//上传完成后回调
+				$('#' + file.id).find('.progress').fadeOut();//上传完删除进度条
+				//$('#' + file.id + 'btn').fadeOut('slow');//上传完后删除"删除"按钮
+
+				var imgName;
+				var fileFormat =file.name.substr(file.name.indexOf("."));
+
+
+				$('#' + file.id).find(".choose-spec").append('<div class="choose-spec upload-content">'
+						+ '<div class="page-quantity"><h6>数量</h6><p><span class="page-quantity-dec"><i class="fa fa-minus"></i></span><input id="' + file.id + '" type="text" class="quantity" value="1"/><span class="page-quantity-add"><i class="fa fa-plus"></i></span></p><input type="hidden" value="0.2" id="price" /><!--单价--></div><div class="print-range choose-size"><h6>打印范围</h6><input class="begin" type="text"><span>-</span><input class="end" type="text"></div>'
+						+ '<div class="single-double choose-size"><h6>单双面</h6><select id="' + file.id + '" class="danshuang"><option value="1">单面</option><option value="0">双面</option></select></div><div class="all-in-one choose-size"></div><div class="paper-color choose-size"><h6>色彩</h6><select id="' + file.id + '" class="secai"><option value="1">黑白</option><option value="0">彩色</option></select></div><div class="file-operate choose-size"><ul>'
+						+ '<li><button fileId="' + file.id + '"><i class="fa fa-file-text-o btn-show"></i>打印预览</button></li>'
+						+ '<p id="' + file.id + '" class="filepath" hidden></p>'
+						+ '<li><button fileId="' + file.id + '"><i class="fa fa-trash-o btn-delete"></i>删除文件</button></li></ul></div></div>');
+
+
+				if( (fileFormat==".ppt") || (fileFormat==".pptx")){
+					$('#' + file.id).find(".all-in-one").append('<h6>多合一</h6><select id="' + file.id + '" class="duoheyi"><option value="1">一合一</option><option value="2">二合一</option><option value="4">六合一</option><option value="9">九合一</option></select>');
+				}
+
+			});
+
+			uploader.on('uploadFinished', function(file) {
+				//上传完后的回调方法
+				//alert("所有文件上传完毕");
+				//提交表单
+
+
+
+
+			});
+
+			$("#UploadBtn").click(function() {
+				uploader.upload();//上传
+			});
+
+			uploader.on('uploadAccept', function(file, response) {
+				//if (uploader.errorCode) {
+				//    // 通过return false来告诉组件，此文件上传有错。
+				//    return false;
+				//}
+				if (response._raw == '{"error":true}') {
+					return false;
+				}
+				else{
+					var obj = eval('(' + response._raw + ')');
+					
+					
+					$(".filepath#"+obj.id).text(obj.filePath)
+					
+					
+				}
+			});
+
+		});
+		
+		
+	</script>
+	<script>
+	
+	
+		$(function() {
+			$("#quantity")
+					.keyup(
+							function() {
+								if (isNaN($(this).val())
+										|| parseInt($(this).val()) < 1) {
+									$(this).val("1");
+									//$("#totalPrice").html($("#price").val());
+									return;
+								}
+								var total = parseFloat($("#price").val())
+										* parseInt($(this).val());
+								//$("#totalPrice").html(total.toFixed(2));
+							})
+
+		})
+		
+		window.setInterval(calc,1000);
+		function calc(){
+			
+			var money=0.00;
+			$("#fileList").children().each(function(i){
+				
+				var ids=$("#fileList").children().get(i).id;
+				 
+				var number=$(".quantity#"+ids).val();
+				 var dan=$(".danshuang#"+ids).val();//1单面
+				 var allinone=$(".duoheyi#"+ids).val();
+				 var color=$(".secai#"+ids).val();//1黑白
+				 
+				 var rangestart=1;
+				 var rangeend=parseInt($('#'+ids).find('span.state').text().substring(5));
+				 if(isNaN(rangeend))rangeend=0;
+				 var per;
+				 if(dan==1){
+					 if(color==1)per=0.2;
+					 if(color==0)per=1;
+				 }else{
+					 if(color==1)per=0.3;
+					 if(color==0)per=2;
+					 
+				 }
+				 
+				 var total;
+				 if(allinone==1){
+					  total=(rangeend-rangestart+1)*per*number;
+				 }
+				 else if(allinone==2){
+					 total=Math.ceil((rangeend-rangestart+1)/2)*per*number;
+					 
+				 }else if(allinone==4){
+					 total=Math.ceil((rangeend-rangestart+1)/6)*per*number;
+				 }else if(allinone==9){
+					 total=Math.ceil((rangeend-rangestart+1)/9)*per*number;
+				 }
+				 
+				 
+				 money=parseFloat(money)+parseFloat(total);
+			})
+			
+			
+			if(isNaN(money))money=0.00;
+			$(".totalPrice").text(money.toFixed(2));
+			
+		}
+		
+		function pay(){
+			var result=new Object();
+			 result.order=new Object();
+			 result.order.tele=document.getElementById('phone-check').value;
+			 result.order.other=document.getElementById('other').value;
+			 result.fileinfos = new Array();
+			
+			
+			
+			$("#fileList").children().each(function(i){
+				var file=new Object();
+				var ids=$("#fileList").children().get(i).id;
+				 file.filename=$(".filename#"+ids).text();
+				 file.number=$(".quantity#"+ids).val();
+				 file.dan=$(".danshuang#"+ids).val();
+				 file.allinone=$(".duoheyi#"+ids).val();
+				 file.color=$(".secai#"+ids).val();
+				 file.savename=$(".filepath#"+ids).text();
+				 file.rangestart=1;
+				 file.rangeend=1;
+				 result.fileinfos.push(file);
+			})
+			
+			json=JSON.stringify(result);
+			//console.log(json);
+			$.ajax({
+				url : "../printerWeb/paying.action",
+				type : "POST",
+				
+				contentType: 'application/json;charset=utf-8',
+				data :json ,
+				dataType : "json",
+				success : function(data) {
+						calc();
+					 window.location.href ="http://127.0.0.1:8080/printerWeb/pay/do.action?WIDout_trade_no="+data.id+"&WIDtotal_amount="+$(".totalPrice").text();
+					
+
+				}
+
+			});
+			
+			
+			
+			
+			
+			
+		}
+		/*商品数量+1*/
+		$(".uploader-list").on("click",".upload-file .choose-spec .page-quantity-add",function(){
+
+			    var quantityAdd = $(this).prev(".quantity");
+
+				var num_add = parseInt(quantityAdd.val()) + 1;
+			    quantityAdd.val(num_add);
+
+				if (quantityAdd.val() == "") {
+					num_add = 1;
+				}
+
+		});
+
+		/*商品数量-1*/
+		$(".uploader-list").on("click",".upload-file .choose-spec .page-quantity-dec",function(){
+
+			var quantityDec = $(this).next(".quantity");
+
+			var num_dec = parseInt(quantityDec.val()) - 1;
+			if (num_dec < 1) {
+				quantityDec.val("1");
+			} else {
+				quantityDec.val(num_dec);
+			}
+
+		})
+
+	</script>
+</body>
+</html>
